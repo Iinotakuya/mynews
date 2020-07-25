@@ -1,13 +1,9 @@
 <?php
-
 namespace App\Http\Controllers\Admin;
-
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
-
 //Profile Modelが扱えるようになる
 use App\Profile;
-
 class ProfileController extends Controller
 {
     //
@@ -33,7 +29,6 @@ class ProfileController extends Controller
       
     return redirect('admin/profile/create');
     }
-    
      public function edit()
      {
         return view('admin.profile.edit');
@@ -41,9 +36,8 @@ class ProfileController extends Controller
     
      public function update()
      {
-        return redirect('admin/profile.edit');
+        return redirect('admin/profile/edit/');
      }
     
 }
-
-
+}
