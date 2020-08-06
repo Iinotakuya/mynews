@@ -28,6 +28,10 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth'],function() {
     Route::post('profile/edit','Admin\ProfileController@update');
 });
 
+/*019-2.【応用】 routes/web.phpを編集して、 /profile にアクセスが来たら ProfileController/index Action に渡すように設定してください。*/
+    Route::get('/profile','ProfileController@index');
+
+
 Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function() {
      Route::get('news/create', 'Admin\NewsController@add');
      Route::post('news/create', 'Admin\NewsController@create'); 

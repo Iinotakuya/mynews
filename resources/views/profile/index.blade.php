@@ -10,9 +10,9 @@
                         <div class="col-md-6">
                             <div class="caption mx-auto">
                                 <div class="image">
-                                     @if ($headline->image_path)
-                                         <img src="{{ asset('storage/image/' . $headline->image_path) }}">
-                                     @endif
+                                    @if ($headline->image_path)
+                                        <img src="{{ asset('storage/image/' . $headline->image_path) }}">
+                                    @endif
                                 </div>
                                 <div class="title p-2">
                                     <h1>{{ str_limit($headline->title, 70) }}</h1>
@@ -34,7 +34,7 @@
                         <div class="row">
                             <div class="text col-md-6">
                                 <div class="date">
-                                    {{ $post->updated_at->format('y年m月d日') }}
+                                    {{ $post->updated_at->format('Y年m月d日') }}
                                 </div>
                                 <div class="title">
                                     {{ str_limit($post->title, 150) }}
