@@ -9,18 +9,22 @@
                     <div class="row">
                         <div class="col-md-6">
                             <div class="caption mx-auto">
-                                <div class="image">
-                                    @if ($headline->image_path)
-                                        <img src="{{ asset('storage/image/' . $headline->image_path) }}">
-                                    @endif
-                                </div>
                                 <div class="title p-2">
-                                    <h1>{{ str_limit($headline->title, 70) }}</h1>
+                                    <h1>{{ str_limit($headline->id, 70) }}</h1>
                                 </div>
                             </div>
                         </div>
                         <div class="col-md-6">
-                            <p class="body mx-auto">{{ str_limit($headline->body, 650) }}</p>
+                            <h1>{{ str_limit($headline->name, 70) }}</h1>
+                        </div>
+                        <div class="col-md-6">
+                            <h1>{{ str_limit($headline->gender, 70) }}</h1>
+                        </div>
+                         <div class="col-md-6">
+                            <h1>{{ str_limit($headline->hobby, 70) }}</h1>
+                        </div>
+                         <div class="col-md-6">
+                            <h1>{{ str_limit($headline->introduction, 70) }}</h1>
                         </div>
                     </div>
                 </div>
@@ -37,17 +41,22 @@
                                     {{ $post->updated_at->format('Y年m月d日') }}
                                 </div>
                                 <div class="title">
-                                    {{ str_limit($post->title, 150) }}
+                                    {{ str_limit($post->id, 150) }}
+                                </div>
+                                 <div class="body mt-3">
+                                    {{ str_limit($post->name, 150) }}
                                 </div>
                                 <div class="body mt-3">
-                                    {{ str_limit($post->body, 1500) }}
+                                    {{ str_limit($post->gender, 150) }}
+                                </div>
+                                <div class="body mt-3">
+                                    {{ str_limit($post->hobby, 150) }}
+                                </div>
+                                <div class="body mt-3">
+                                    {{ str_limit($post->introduction, 150) }}
                                 </div>
                             </div>
-                            <div class="image col-md-6 text-right mt-4">
-                                @if ($post->image_path)
-                                    <img src="{{ asset('storage/image/' . $post->image_path) }}">
-                                @endif
-                            </div>
+                            
                         </div>
                     </div>
                     <hr color="#c0c0c0">
